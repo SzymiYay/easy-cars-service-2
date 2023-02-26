@@ -22,8 +22,9 @@ class CarsService:
             case _:
                 return sorted(self.cars, key=lambda car: car.wheel.size, reverse=reverse)
 
-    def get_cars_with_body_type_and_price_in_range(self, price_from: Decimal, price_to: Decimal,
-                                                   body_type: CarBodyType):
+    def get_cars_with_body_type_and_price_in_range(
+            self, price_from: Decimal, price_to: Decimal, body_type: CarBodyType
+    ) -> list[Car]:
         if price_from > price_to:
             raise ValueError('Price range is not correct')
 
