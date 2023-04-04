@@ -26,7 +26,7 @@ def main() -> None:
 
     cars = get_cars(cars_data)
 
-    cars_service = CarsService(list(cars))
+    cars_service = CarsService(cars)
     logger.info('Successfully created CarsService')
 
     logger.debug('Cars sorted by specified criteria')
